@@ -13,7 +13,7 @@
 </div>
 
 <div align="center">
-   <img src="media/readme/vr_demo.gif?raw=true" alt="VR demo" title="VR demo" style="width: 45%;" /> <img src="media/readme/leader_demo.gif?raw=true" alt="Leader demo" title="Leader demo" style="width: 45%;" />
+   <img src="media/readme/vr_demo.gif?raw=true" alt="VR demo" title="VR demo" style="width: 49%;" /> <img src="media/readme/leader_demo.gif?raw=true" alt="Leader demo" title="Leader demo" style="width: 49%;" />
     <!-- <br/><span style="color:red; font-size:12px;">(动图)</span> -->
 </div>
 

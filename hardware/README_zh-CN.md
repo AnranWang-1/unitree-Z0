@@ -30,7 +30,7 @@
 
 
 # 1. 构建你的<span style="color:red">Uniarm</span>
-我们目前仅支持自行构建的方式：
+我们目前仅支持自行构建的方式，步骤如下：
 
 1. 首先需要购买非打印零部件，购买清单见[1.1 采购零件](#11-采购零件).
 2. 3D打印机械臂主体零件，具体说明见[1.2 打印零件](#12-打印零件).
@@ -46,14 +46,14 @@
 
 | 部件 | 数量 | 单价 (RMB) | 购买 CN |
 | ---- | ---- |----------| ------- |
-| J288舵机| 16 | 599 | [Alibaba](https://e.tb.cn/h.iH9q7JQ33hJUSic?tk=IKJg5jXRZJSHU287) |
-| 电机控制板 | 2 | 99 | [Alibaba](https://e.tb.cn/h.iH9q7JQ33hJUSic?tk=IKJg5jXRZJSHU287)| 
+| J288舵机| 16 | 599 | [Alibaba](https://detail.tmall.com/item.htm?app=chrome&bxsign=scdz2f0snPj9vmk_AgV-zO3sLQEPFOK6-qCQ_pbcOg28FLIdlV4KcqE-ElChcgXl_ajb0ftzEknjg3moi7xdRPkixF1vgzs914wrqi-mXl_DLVOkwQ_4pfwdENqKzn6Nk2d&cpp=1&h5_spm=a-tb-item.b-tb-item&id=1013064765085&share_crt_v=1&shareurl=true&short_name=h.iH9q7JQ33hJUSic&sp_tk=SUtKZzVqWFJaSlM%3D&spm=a2159r.13376460.0.0&tbSocialPopKey=shareItem&tk=IKJg5jXRZJSHU287&un=80f1c3ec9848a15f0a62cb2c046d31df&un_site=0&ut_sk=1.aPJDlV7XQ34DAFwSBD1M3rTL_21646297_1777025038443.TaoPassword-WeiXin.1&wxsign=tbwnYmcZ8qSnI5hBqnSXjxB8FJgKhTIwlmp-ztXX2anJ0hQkn9DQ5400DsjLagVrgu1H18lj8UNZ-uxLbbvjZlV-8qDDuA_F7VgL0XOlFeH4gjEYhbYOce3MJvitg8XLuqzz5L2-Og3Ykvvgf8h7-P6CA&x-ssr=true&skuId=6181458503257) |
+| 电机控制板 | 2 | 99 | [Alibaba](https://detail.tmall.com/item.htm?app=chrome&bxsign=scdsFfl08q1Uys4UlipmXu-jQGY7v4pCkQdEoSoXXuon--FO2l3IVPX_JyK2JTxN3AJV8y7i9d-9rnL21btzcooI-7RU0TRv9xN8OKFIgT6ieJ3bF1HAOPWj0pbrSHvQyGA&cpp=1&h5_spm=a-tb-item.b-tb-item&id=1013064765085&share_crt_v=1&shareurl=true&short_name=h.iH9q7JQ33hJUSic&sp_tk=SUtKZzVqWFJaSlM%3D&spm=a2159r.13376460.0.0&tbSocialPopKey=shareItem&tk=IKJg5jXRZJSHU287&un=80f1c3ec9848a15f0a62cb2c046d31df&un_site=0&ut_sk=1.aPJDlV7XQ34DAFwSBD1M3rTL_21646297_1777025038443.TaoPassword-WeiXin.1&wxsign=tbwnYmcZ8qSnI5hBqnSXjxB8FJgKhTIwlmp-ztXX2anJ0hQkn9DQ5400DsjLagVrgu1H18lj8UNZ-uxLbbvjZlV-8qDDuA_F7VgL0XOlFeH4gjEYhbYOce3MJvitg8XLuqzz5L2-Og3Ykvvgf8h7-P6CA&x-ssr=true&skuId=6181458503258)| 
 | 腕部相机 | 1 | 190 | [Alibaba](https://item.taobao.com/item.htm?id=739033087984&skuId=5267839634724)|
-| 场景相机 | 1 | 132 | [Alibaba](https://detail.tmall.com/item.htm?id=631167230453&skuId=6105245094571)| 
-| USB-C 数据线 | 2 | 22.8 | [Alibaba](https://e.tb.cn/h.itebBTDTzUCVMnm?tk=Ia1Z5jXFDnAMF278)| 
+| 全局相机 | 1 | 183 | [Alibaba](https://detail.tmall.com/item.htm?id=631167230453&skuId=6105245094571)| 
+| USB-C 数据线 | 2 | 23.5 | [Alibaba](https://e.tb.cn/h.itebBTDTzUCVMnm?tk=Ia1Z5jXFDnAMF278)| 
 | 24V-5A电源适配器 | 2 | 30 | [Alibaba](https://item.taobao.com/item.htm?abbucket=10&id=769661452640&mi_id=0000lPJIlFPmQ5qQpd5ZGiE5ihEapK61h68lGSSAgUbv0vI&ns=1&priceTId=2150472e17688106605562084e1bef&skuId=5623956616060&spm=a21n57.1.hoverItem.7&utparam=%7B%22aplus_abtest%22%3A%2280ebc6dc211e261f18bac44dbc47a7b0%22%7D&xxc=taobaoSearch)|
 | 电源转换线 | 2 | 9.9 | [Alibaba](https://item.taobao.com/item.htm?id=944933463975&skuId=5850600264594)|
-| 桌夹 | 4 | 7.8 | [Alibaba](https://detail.tmall.com/item.htm?id=801399113134&skuId=5817329226938) |
+| 固定器 | 4 | 7.8 | [Alibaba](https://detail.tmall.com/item.htm?id=801399113134&skuId=5817329226938) |
 
 请额外准备紧固件若干： 72* 螺栓 M2X10，92* 螺栓 M2X8，14* 螺栓 M2X5，4* 螺栓 M3X6，4* 螺母 M3
 

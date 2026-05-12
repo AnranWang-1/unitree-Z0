@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//home/unitree/unitree/lerobot/examples/phone_to_so100/**)"
+    ]
+  }
+}

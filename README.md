@@ -57,7 +57,7 @@ Unitree XR Teleoperate 是一个轻量化的 <span style="color:red">UniArm</spa
 ### **1. 克隆仓库**
 
 ```bash
-git clone https://github.com/AnranWang-1/uniarm-z0.git
+git clone https://github.com/AnranWang-1/unitree-Z0.git
 cd uniarm-Z0
 ```
 

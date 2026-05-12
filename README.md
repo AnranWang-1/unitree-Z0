@@ -13,8 +13,12 @@
 </div>
 
 <div align="center">
-   <img src="media/readme/vr_demo.gif?raw=true" alt="VR demo" title="VR demo" style="width: 49%;" /> <img src="media/readme/leader_demo.gif?raw=true" alt="Leader demo" title="Leader demo" style="width: 49%;" />
-    <!-- <br/><span style="color:red; font-size:12px;">(动图)</span> -->
+<table>
+  <tr>
+    <td><img src="media/readme/vr_demo.gif?raw=true" alt="VR demo" title="VR demo" style="max-width: 45%;" /></td>
+    <td><img src="media/readme/leader_demo.gif?raw=true" alt="Leader demo" title="Leader demo" style="max-width: 45%;" /></td>
+  </tr>
+</table>
 </div>
 
 ## ✳️ 概述
@@ -75,14 +79,14 @@ bash setup.sh
 VR 手柄模式需要安装 xrobotoolkit SDK，请参考 [xrobotoolkit 文档](https://github.com/XR-Robotics) 进行配置。
 
 大致过程：
-#### 3.1 安装 XRoboToolkit-PC-Service
+#### 3.1 PC 上安装 XRoboToolkit-PC-Service
 ```bash
 wget https://github.com/XR-Robotics/XRoboToolkit-PC-Service/releases/download/v1.0.0/XRoboToolkit_PC_Service_1.0.0_ubuntu_22.04_amd64.deb
 
 sudo dpkg -i XRoboToolkit_PC_Service_1.0.0_ubuntu_22.04_amd64.deb
 ```
 
-#### 3.2 安装 Pico 客户端
+#### 3.2 Pico 上安装客户端
 - 下载 APK: https://github.com/XR-Robotics/XRoboToolkit-Unity-Client/releases/download/v1.1.1/XRoboToolkit-PICO-1.1.1.apk
 - 将 Pico 连接电脑，把 APK 拖入 Pico Download 文件夹
 - 在 Pico 中安装 APK

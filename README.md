@@ -45,7 +45,7 @@ Unitree XR Teleoperate 是一个轻量化的 <span style="color:red">UniArm</spa
 <table>
   <tr>
     <td><img src="media/readme/real_follower.png?raw=true" alt="Follower" title="Follower" style="max-width: 100%;" /></td>
-    <td><img src="media/readme/real_leader.png?raw=true" alt="Leader" title="Leader" style="max-width: 100%;" /></td>
+    <td><img src="media/readme/real_leader.png?raw=true" alt="Leader" title="Leader" style="max-width: 83%;" /></td>
   </tr>
 </table>
 </div>

@@ -15,8 +15,8 @@
 <div align="center">
 <table>
   <tr>
-    <td><img src="media/readme/vr_demo.gif?raw=true" alt="VR demo" title="VR demo" style="max-width: 45%;" /></td>
-    <td><img src="media/readme/leader_demo.gif?raw=true" alt="Leader demo" title="Leader demo" style="max-width: 45%;" /></td>
+    <td><img src="media/readme/vr_demo.gif?raw=true" alt="VR demo" title="VR demo" style="max-width: 100%;" /></td>
+    <td><img src="media/readme/leader_demo.gif?raw=true" alt="Leader demo" title="Leader demo" style="max-width: 100%;" /></td>
   </tr>
 </table>
 </div>

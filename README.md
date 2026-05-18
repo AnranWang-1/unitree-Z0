@@ -1,6 +1,6 @@
 <div align="center">
 
-# Unitree XR Teleoperate
+# UniArmL1
 
   <a href="https://www.unitree.com/" target="_blank">
     <img src="https://www.unitree.com/images/0079f8938336436e955ea3a98c4e1e59.svg" alt="Unitree LOGO" width="25%">
@@ -61,7 +61,7 @@ UniArmL1 机械臂的BOM 清单、组装指南、与 3D 打印文件请参考：
 ### **1. 克隆仓库**
 
 ```bash
-git clone https://github.com/AnranWang-1/UniArmL1.git
+git clone https://github.com/unitreerobotics/UniArmL1
 cd UniArmL1
 ```
 

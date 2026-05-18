@@ -6,7 +6,7 @@
     <img src="https://www.unitree.com/images/0079f8938336436e955ea3a98c4e1e59.svg" alt="Unitree LOGO" width="25%">
   </a>
 
-**<span style="color:red">UniArmL1</span>** 机械臂遥操作与数据采集框架
+**UniArmL1** 机械臂遥操作与数据采集框架
 
 <!-- [![English](https://img.shields.io/badge/English-README-blue)](./README.md) [![中文](https://img.shields.io/badge/中文-README-green)](./README_zh.md) -->
 
@@ -23,11 +23,11 @@
 
 ## ✳️ 概述
 
-Unitree XR Teleoperate 是一个轻量化的 <span style="color:red">UniArmL1</span> 机械臂遥操作框架，支持三种控制模式与标准化数据采集，采集数据可无缝对接 [unitree_lerobot](https://github.com/unitreerobotics/unitree_lerobot) 进行模仿学习训练与部署。
+Unitree XR Teleoperate 是一个轻量化的 UniArmL1 机械臂遥操作框架，支持三种控制模式与标准化数据采集，采集数据可无缝对接 [unitree_lerobot](https://github.com/unitreerobotics/unitree_lerobot) 进行模仿学习训练与部署。
 
 **核心功能：**
 
-- 🎮 **遥操作控制** — VR 手柄 / 键盘 / 主从臂三种模式实时控制 <span style="color:red">UniArmL1</span>
+- 🎮 **遥操作控制** — VR 手柄 / 键盘 / 主从臂三种模式实时控制 UniArmL1
 - 📦 **数据采集** — 固定频率录制关节角度与相机图像，输出标准格式数据集
 - 🔄 **训练对接** — 采集数据可直接用于 [unitree_lerobot](https://github.com/unitreerobotics/unitree_lerobot) 模仿学习训练
 
@@ -37,7 +37,7 @@ Unitree XR Teleoperate 是一个轻量化的 <span style="color:red">UniArmL1</s
 
 ## 🔧 硬件准备
 
-<span style="color:red">UniArmL1</span> 机械臂的BOM 清单、组装指南、与 3D 打印文件请参考：
+UniArmL1 机械臂的BOM 清单、组装指南、与 3D 打印文件请参考：
 
 👉 [unitree_UniArmL1_hardware](hardware/README_zh-CN.md)
 
@@ -162,7 +162,7 @@ python teleop/teleop.py -i keyboard
    />
    <!-- <br/><span style="color:red; font-size:12px;">(动图)</span> -->
 </div>
-使用另一条 <span style="color:red">UniArmL1</span> 作为主臂，直接映射关节角度：
+使用另一条 UniArmL1 作为主臂，直接映射关节角度：
 
 ```bash
 python teleop/teleop.py -i leader --port /dev/ttyACM1 --leader-port /dev/ttyACM2

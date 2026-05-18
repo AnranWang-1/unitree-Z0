@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """
-UniArm 机械臂校准脚本
+UniArmL1 机械臂校准脚本
 
 用法:
     # 从臂 (8电机，双电机驱动 shoulder_lift 和 elbow_flex)
-    python teleop/scripts/calibrate_uniarm.py --port /dev/ttyACM0 --id follower
+    python teleop/scripts/calibrate_uniarm_l1.py --port /dev/ttyACM0 --id follower
 
     # 主臂 (6电机，单电机驱动)
-    python teleop/scripts/calibrate_uniarm.py --port /dev/ttyACM4 --id leader
+    python teleop/scripts/calibrate_uniarm_l1.py --port /dev/ttyACM4 --id leader
 
 校准文件保存位置:
     teleop/robot_control/calibration/{id}.json
@@ -20,8 +20,8 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from robot_control.arm.uniarm import UniArm
-from robot_control.arm.config_uniarm import UniArmRobotConfig
+from robot_control.arm.uniarm_l1 import UniArmL1
+from robot_control.arm.config_uniarm_l1 import UniArmL1RobotConfig
 
 logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
 
@@ -49,7 +49,7 @@ DEFAULT_JOINT_MOTOR_IDS = {
 
 
 def main():
-    parser = argparse.ArgumentParser(description="UniArm 机械臂校准工具")
+    parser = argparse.ArgumentParser(description="UniArmL1 机械臂校准工具")
     parser.add_argument(
         "--port",
         type=str,
@@ -70,7 +70,7 @@ def main():
     n_motors = sum(len(ids) for ids in joint_motor_ids.values())
 
     print("=" * 60)
-    print(f"UniArm 校准工具")
+    print(f"UniArmL1 校准工具")
     print(f"  串口: {args.port}")
     print(f"  ID: {args.id}")
     print(f"  电机数: {n_motors}")
@@ -80,7 +80,7 @@ def main():
     project_root = Path(__file__).parent.parent.parent
     urdf_path = project_root / "assets/urdf_v0.7/urdf/urdf_v0.7.urdf"
 
-    config = UniArmRobotConfig(
+    config = UniArmL1RobotConfig(
         port=args.port,
         cameras={},
         id=args.id,
@@ -89,7 +89,7 @@ def main():
     )
 
     # 创建机械臂实例
-    robot = UniArm(config)
+    robot = UniArmL1(config)
 
     # 显示校准文件路径
     print(f"\n校准文件将保存到:")

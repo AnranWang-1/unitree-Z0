@@ -7,7 +7,7 @@ Usage:
     python teleop.py --input keyboard --port /dev/ttyACM0
     python teleop.py --input leader --leader-port /dev/ttyACM2
 
-所有参数默认值定义在 robot_control/arm/config_uniarm.py 的 TeleopConfig 中，
+所有参数默认值定义在 robot_control/arm/config_uniarm_l1.py 的 TeleopConfig 中，
 修改该文件即可永久更改默认值，CLI 参数可临时覆盖。
 """
 
@@ -15,8 +15,8 @@ import argparse
 import logging
 from pathlib import Path
 
-from robot_control.arm.config_uniarm import UniArmRobotConfig, TeleopConfig
-from robot_control.arm.uniarm import UniArm
+from robot_control.arm.config_uniarm_l1 import UniArmL1RobotConfig, TeleopConfig
+from robot_control.arm.uniarm_l1 import UniArmL1
 from robot_control.input.input_keyboard import KeyboardInput
 from robot_control.input.input_leader import LeaderArmInput
 from robot_control.recorder import EpisodeRecorder, NullRecorder
@@ -58,11 +58,11 @@ def parse_cameras(camera_strs: list[str] | None) -> dict:
 
 
 def main():
-    # Load defaults from TeleopConfig (defined in config_uniarm.py)
+    # Load defaults from TeleopConfig (defined in config_uniarm_l1.py)
     cfg = TeleopConfig()
 
     # Build argparse with dataclass field values as defaults (CLI args override)
-    parser = argparse.ArgumentParser(description="Unified teleoperation for UniArm")
+    parser = argparse.ArgumentParser(description="Unified teleoperation for UniArmL1")
     parser.add_argument("--input", "-i", choices=["vr", "keyboard", "leader"],
                         default=cfg.input, help="Input source mode")
     parser.add_argument("--port", "-p", type=str,
@@ -97,7 +97,7 @@ def main():
     cameras = {} if args.no_camera else parse_cameras(args.cameras)
 
     # Follower arm
-    follower_config = UniArmRobotConfig(
+    follower_config = UniArmL1RobotConfig(
         port=args.port,
         cameras=cameras,
         id="follower",
@@ -105,7 +105,7 @@ def main():
         use_vr=(args.input == "vr"),
         no_real_robot=args.no_real_robot,
     )
-    follower = UniArm(follower_config)
+    follower = UniArmL1(follower_config)
 
     # Input source
     leader = None
@@ -115,13 +115,13 @@ def main():
     elif args.input == "keyboard":
         input_source = KeyboardInput()
     else:  # leader
-        leader_config = UniArmRobotConfig(
+        leader_config = UniArmL1RobotConfig(
             port=args.leader_port,
             cameras={},
             id="leader",
             urdf_path=urdf_path,
         )
-        leader = UniArm(leader_config)
+        leader = UniArmL1(leader_config)
         input_source = LeaderArmInput(leader)
 
     # Recorder

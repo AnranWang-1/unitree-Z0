@@ -10,7 +10,7 @@ from .input.input_source import InputSource
 from .input.input_keyboard import KeyboardInput
 from .input.input_leader import LeaderArmInput
 from .recorder import Recorder
-from .arm.uniarm import UniArm
+from .arm.uniarm_l1 import UniArmL1
 from robot_control.input.input_vr import VRInput
 
 logger = logging.getLogger(__name__)
@@ -31,10 +31,10 @@ class TeleopRunner:
 
     def __init__(
         self,
-        robot: UniArm,
+        robot: UniArmL1,
         input_source: InputSource,
         recorder: Recorder,
-        leader: UniArm | None = None,
+        leader: UniArmL1 | None = None,
         control_dt: float = 0.01,
         record_hz: int = 50,
         show_camera: bool = True,
@@ -87,7 +87,7 @@ class TeleopRunner:
             )
             self._viz = MeshcatVisualizer(model, collision_model, visual_model)
             self._viz.initViewer(open=True)
-            self._viz.loadViewerModel("uniarm")
+            self._viz.loadViewerModel("uniarm_l1")
             self._viz.display(pin.neutral(model))
             self._viz_model = model
             logger.info("Meshcat viewer started")

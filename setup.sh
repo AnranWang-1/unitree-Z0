@@ -16,7 +16,7 @@ echo -e "${GREEN}=== XR Teleoperate 环境安装脚本 ===${NC}"
 
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 REPO_ROOT="$SCRIPT_DIR"
-ENV_NAME="${1:-uniarm}"
+ENV_NAME="${1:-UniArmL1}"
 XROBO_PYBIND_DIR=""
 OS_NAME="$(uname -s)"
 

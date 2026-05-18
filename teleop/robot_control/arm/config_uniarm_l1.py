@@ -1,11 +1,11 @@
-"""UniArm robot configuration — all-in-one config module.
+"""UniArmL1 robot configuration — all-in-one config module.
 
 修改此文件中的默认值即可调整所有参数，无需额外 YAML 文件。
 
 Contains:
 - RobotConfig: base class with subclass registry
-- UniArmConfig: UniArm hardware parameters (serial port, motors, PD gains, etc.)
-- UniArmRobotConfig: composed config (RobotConfig + UniArmConfig)
+- UniArmL1Config: UniArmL1 hardware parameters (serial port, motors, PD gains, etc.)
+- UniArmL1RobotConfig: composed config (RobotConfig + UniArmL1Config)
 - TeleopConfig: teleop flow configuration (input mode, cameras, recording, etc.)
 """
 
@@ -41,11 +41,11 @@ class RobotConfig:
         return cls._registry.get(key)
 
 
-# ── UniArm hardware config ─────────────────────────────────────
+# ── UniArmL1 hardware config ────────────────────────────────────
 
 @dataclass
-class UniArmConfig:
-    """UniArm 机械臂硬件配置。"""
+class UniArmL1Config:
+    """UniArmL1 机械臂硬件配置。"""
 
     # 串口端口
     port: str
@@ -92,13 +92,13 @@ class UniArmConfig:
     no_real_robot: bool = False
 
 
-@RobotConfig.register_subclass("uniarm_follower")
+@RobotConfig.register_subclass("uniarm_l1_follower")
 @dataclass
-class UniArmRobotConfig(RobotConfig, UniArmConfig):
+class UniArmL1RobotConfig(RobotConfig, UniArmL1Config):
     pass
 
 
-UniArmConfigType: TypeAlias = UniArmRobotConfig
+UniArmL1ConfigType: TypeAlias = UniArmL1RobotConfig
 
 
 # ── Teleop flow config ─────────────────────────────────────────
@@ -110,7 +110,7 @@ class TeleopConfig:
     input: str = "vr"  # vr | keyboard | leader
     port: str = "/dev/ttyACM0"  # Follower arm serial port
     leader_port: str = "/dev/ttyACM3"  # Leader arm serial port
-    urdf_path: str = "../assets/uni-arm/urdf/urdf_v0.7.urdf"
+    urdf_path: str = "../assets/uniarml1/urdf/urdf_v0.7.urdf"
     cameras: list[str] = field(default_factory=lambda: ["head:2"])
     no_camera: bool = False
     record: bool = False

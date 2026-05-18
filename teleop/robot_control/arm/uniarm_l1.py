@@ -10,8 +10,8 @@ from scipy.spatial.transform import Rotation as R
 
 from image_server.utils import make_cameras_from_configs
 
-from .config_uniarm import UniArmRobotConfig
-from .uniarm_bus import UnitreeMotorsBus
+from .config_uniarm_l1 import UniArmL1RobotConfig
+from .uniarm_l1_bus import UnitreeMotorsBus
 from .constants import OUT_POS_RES
 from .utiles import OutPosRaw2OutPos_rad
 from .kinematics import RobotKinematics
@@ -25,15 +25,15 @@ class MotorCalibration:
     range_min: float
     range_max: float
 
-class UniArm:
+class UniArmL1:
     """
     Generic SO follower base implementing common functionality for SO-100/101/10X.
     Designed to be subclassed with a per-hardware-model `config_class` and `name`.
     """
 
-    name = "uniarm_follower"
+    name = "uniarm_l1_follower"
 
-    def __init__(self, config: UniArmRobotConfig):
+    def __init__(self, config: UniArmL1RobotConfig):
         self.config = config
 
         # 电机配置：支持双电机关节
@@ -282,7 +282,7 @@ class UniArm:
         import select
         import sys
 
-        logger.info("\n--- 启动 UniArm 校准（每电机独立标定）---")
+        logger.info("\n--- 启动 UniArmL1 校准（每电机独立标定）---")
 
         # ---------- 阶段 1：建立零点 origin ----------
         print("\n[阶段 1/2] 请将机械臂摆到【零位姿态】。按回车锁定 zero...")
@@ -688,7 +688,7 @@ class UniArm:
         self._control_thread = threading.Thread(
             target=self._control_loop_worker,
             daemon=True,
-            name="uniarm_control_loop",
+            name="uniarm_l1_control_loop",
         )
         self._control_thread.start()
 

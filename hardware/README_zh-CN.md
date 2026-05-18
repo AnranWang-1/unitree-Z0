@@ -1,6 +1,6 @@
 <div align="center">
 
-  <h1 align="center"> Open <span style="color:red">Uniarm</span> </h1>
+  <h1 align="center"> Open <span style="color:red">UniArmL1</span> </h1>
   <a href="https://www.unitree.com/" target="_blank">
     <img src="https://www.unitree.com/images/0079f8938336436e955ea3a98c4e1e59.svg" alt="Unitree LOGO" width="25%">
   </a>
@@ -10,26 +10,26 @@
 </div>
 
 # 0. 📖 介绍
-<span style="color:red">Uniarm</span> 是宇树科技设计与开发的 6-dof 机械臂，现已开源，欢迎大家使用与进一步开发，一起帮助让面向机器人领域的端到端AI技术更加易于获取和使用！
+<span style="color:red">UniArmL1</span> 是宇树科技设计与开发的 6-dof 机械臂，现已开源，欢迎大家使用与进一步开发，一起帮助让面向机器人领域的端到端AI技术更加易于获取和使用！
 <div align="center">
    <img
       src="../media/readme/real_follower.png?raw=true"
-      alt="follower"
-      title="follower"
+      alt="UniArmL1 follower"
+      title="UniArmL1 follower"
       style="width: 42.1%;"
     />
    <img
       src="../media/readme/real_leader.png?raw=true"
-      alt="uniarm leader"
-      title="uniarm leader"
+      alt="UniArmL1 leader"
+      title="UniArmL1 leader"
       style="width: 40%;"
     />
 </div>
 
-通过标准化软硬件接口，<span style="color:red">UniArm</span> 能快速接入现有宇树平台，降低集成与二次开发门槛，缩短从原型到应用的周期。
+通过标准化软硬件接口，<span style="color:red">UniArmL1</span> 能快速接入现有宇树平台，降低集成与二次开发门槛，缩短从原型到应用的周期。
 
 
-# 1. 构建你的<span style="color:red">Uniarm</span>
+# 1. 构建你的<span style="color:red">UniArmL1</span>
 我们目前仅支持自行构建的方式，步骤如下：
 
 1. 首先需要购买非打印零部件，购买清单见[1.1 采购零件](#11-采购零件).
@@ -78,10 +78,10 @@
 用于 leader 和 follower 的所有零件都已经整合在单个文件中，并且已为 3D 打印做好优化处理；其朝向也已正确设置，以尽量减少支撑结构并确保打印精度。
 对于 220 mm × 220 mm 打印床尺寸的打印机，请打印以下这些文件：
 - Follower
-    - [主干](STL/Uniarm.3mf)
+    - [主干](STL/UniArmL1.3mf)
     - [平行夹爪](STL/Gripper+Handle.3mf)
 - Leader
-    - [主干](STL/Uniarm.3mf)
+    - [主干](STL/UniArmL1.3mf)
     - [握持结构](STL/Gripper+Handle.3mf)
 
 >注意！末端由于Leader需要加装相机，Follower需要加装把手，模型并不相同，但是都在一个打印文件中，可以参考部件朝向。

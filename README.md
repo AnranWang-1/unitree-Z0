@@ -6,7 +6,7 @@
     <img src="https://www.unitree.com/images/0079f8938336436e955ea3a98c4e1e59.svg" alt="Unitree LOGO" width="25%">
   </a>
 
-**<span style="color:red">UniArm</span>** 机械臂遥操作与数据采集框架
+**<span style="color:red">UniArmL1</span>** 机械臂遥操作与数据采集框架
 
 <!-- [![English](https://img.shields.io/badge/English-README-blue)](./README.md) [![中文](https://img.shields.io/badge/中文-README-green)](./README_zh.md) -->
 
@@ -23,11 +23,11 @@
 
 ## ✳️ 概述
 
-Unitree XR Teleoperate 是一个轻量化的 <span style="color:red">UniArm</span> 机械臂遥操作框架，支持三种控制模式与标准化数据采集，采集数据可无缝对接 [unitree_lerobot](https://github.com/unitreerobotics/unitree_lerobot) 进行模仿学习训练与部署。
+Unitree XR Teleoperate 是一个轻量化的 <span style="color:red">UniArmL1</span> 机械臂遥操作框架，支持三种控制模式与标准化数据采集，采集数据可无缝对接 [unitree_lerobot](https://github.com/unitreerobotics/unitree_lerobot) 进行模仿学习训练与部署。
 
 **核心功能：**
 
-- 🎮 **遥操作控制** — VR 手柄 / 键盘 / 主从臂三种模式实时控制 <span style="color:red">UniArm</span>
+- 🎮 **遥操作控制** — VR 手柄 / 键盘 / 主从臂三种模式实时控制 <span style="color:red">UniArmL1</span>
 - 📦 **数据采集** — 固定频率录制关节角度与相机图像，输出标准格式数据集
 - 🔄 **训练对接** — 采集数据可直接用于 [unitree_lerobot](https://github.com/unitreerobotics/unitree_lerobot) 模仿学习训练
 
@@ -37,9 +37,9 @@ Unitree XR Teleoperate 是一个轻量化的 <span style="color:red">UniArm</spa
 
 ## 🔧 硬件准备
 
-<span style="color:red">UniArm</span> 机械臂的BOM 清单、组装指南、与 3D 打印文件请参考：
+<span style="color:red">UniArmL1</span> 机械臂的BOM 清单、组装指南、与 3D 打印文件请参考：
 
-👉 [unitree_uniarm_hardware](hardware/README_zh-CN.md)
+👉 [unitree_UniArmL1_hardware](hardware/README_zh-CN.md)
 
 <div align="center">
    <img
@@ -61,8 +61,8 @@ Unitree XR Teleoperate 是一个轻量化的 <span style="color:red">UniArm</spa
 ### **1. 克隆仓库**
 
 ```bash
-git clone https://github.com/AnranWang-1/unitree-Z0.git
-cd unitree-Z0
+git clone https://github.com/AnranWang-1/UniArmL1.git
+cd UniArmL1
 ```
 
 ### **2. 安装依赖**
@@ -99,7 +99,7 @@ sudo dpkg -i XRoboToolkit_PC_Service_1.0.0_ubuntu_22.04_amd64.deb
 ### **1. 检查端口**
 
 ```bash
-conda activate uniarm
+conda activate UniArmL1
 # 查看串口设备
 python teleop/scripts/check_port_all.py
 ```
@@ -115,8 +115,8 @@ sudo chmod 777 /dev/ttyACM*
 首次使用或更换电机后，需要对机械臂进行校准：
 
 ```bash
-python teleop/scripts/calibrate_uniarm.py --port /dev/ttyACM1 --id follower
-python teleop/scripts/calibrate_uniarm.py --port /dev/ttyACM0 --id leader
+python teleop/scripts/calibrate_UniArmL1.py --port /dev/ttyACM1 --id follower
+python teleop/scripts/calibrate_UniArmL1.py --port /dev/ttyACM0 --id leader
 ```
 请根据自己查找到的端口修改--port参数，校准数据保存在 `~/.cache/unitree/calibration/` 目录下。
 
@@ -162,7 +162,7 @@ python teleop/teleop.py -i keyboard
    />
    <!-- <br/><span style="color:red; font-size:12px;">(动图)</span> -->
 </div>
-使用另一条 <span style="color:red">UniArm</span> 作为主臂，直接映射关节角度：
+使用另一条 <span style="color:red">UniArmL1</span> 作为主臂，直接映射关节角度：
 
 ```bash
 python teleop/teleop.py -i leader --port /dev/ttyACM1 --leader-port /dev/ttyACM2
@@ -204,8 +204,8 @@ python teleop/teleop.py -i vr --record --task-dir ./data/pick_place --task-goal 
 <div align="center">
    <img
       src="media/readme/eval_demo.gif?raw=true"
-      alt="UniArm 策略推理演示"
-      title="UniArm 策略推理演示"
+      alt="UniArmL1 策略推理演示"
+      title="UniArmL1 策略推理演示"
       style="width: 60%;"
    />
    <!-- <br/><span style="color:red; font-size:12px;">(动图) -->

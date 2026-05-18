@@ -16,11 +16,11 @@ import termios
 import numpy as np
 
 from .input_source import InputSource
-from ..arm.uniarm import UniArm
+from ..arm.uniarm_l1 import UniArmL1
 
 
 class LeaderArmInput(InputSource):
-    """Input from a leader UniArm that directly provides joint angles.
+    """Input from a leader UniArmL1 that directly provides joint angles.
 
     Instead of computing delta poses and running IK, this source
     reads the leader arm's current joint angles and passes them
@@ -30,7 +30,7 @@ class LeaderArmInput(InputSource):
         s = toggle recording, d = delete episode, h = reset home, q = quit
     """
 
-    def __init__(self, leader: UniArm):
+    def __init__(self, leader: UniArmL1):
         self.leader = leader
 
         self._old_settings = None

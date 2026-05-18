@@ -181,8 +181,8 @@ python teleop/teleop.py -i vr --record --task-dir ./data/pick_place --task-goal 
 - `--input`, `-i`: 输入源模式，可选值：`vr` (VR 手柄)、`keyboard` (键盘)、`leader` (主从臂)。默认值：`vr`。
 - `--port`, `-p`: 从臂串口端口。默认值：`/dev/ttyACM1`。
 - `--leader-port`: 主臂串口端口，仅在主从模式下使用。默认值：`/dev/ttyACM2`。
-- `--urdf`: URDF 文件路径。默认值：`assets/urdf_v0.7/urdf/urdf_v0.7.urdf`。
-- `--mesh-dir`: 网格目录路径。默认值：`assets/urdf_v0.7/urdf/`。
+- `--urdf`: URDF 文件路径。默认值：`assets/uniarml1/urdf/UniArmL1.urdf`。
+- `--mesh-dir`: 网格目录路径。默认值：`assets/uniarml1/urdf/`。
 - `--cameras`, `-c`: 相机配置，格式为 `name:id`，例如 `head:0 wrist:2`。可以指定多个。
 - `--no-camera`: 禁用相机显示。默认不启用。
 - `--record`, `-r`: 启用数据录制。默认不启用。

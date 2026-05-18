@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8.3)
 
-project(urdf_v0.7)
+project(uniarml1)
 
 find_package(catkin REQUIRED)
 

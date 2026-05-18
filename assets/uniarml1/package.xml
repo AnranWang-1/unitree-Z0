@@ -1,10 +1,10 @@
 <package format="2">
-  <name>urdf_v0.7</name>
+  <name>uniarml1</name>
   <version>1.0.0</version>
   <description>
-    <p>URDF Description package for urdf_v0.7</p>
-    <p>This package contains configuration data, 3D models and launch files
-for urdf_v0.7 robot</p>
+    <p>URDF Description package for UniArmL1</p>
+    <p>This package contains configuration data and 3D models
+for UniArmL1 robot</p>
   </description>
   <author>TODO</author>
   <maintainer email="TODO@email.com" />

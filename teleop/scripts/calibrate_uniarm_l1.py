@@ -78,7 +78,7 @@ def main():
 
     # 创建配置 - 使用项目根目录的绝对路径
     project_root = Path(__file__).parent.parent.parent
-    urdf_path = project_root / "assets/urdf_v0.7/urdf/urdf_v0.7.urdf"
+    urdf_path = project_root / "assets/uniarml1/urdf/UniArmL1.urdf"
 
     config = UniArmL1RobotConfig(
         port=args.port,
